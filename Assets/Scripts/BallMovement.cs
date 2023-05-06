@@ -5,7 +5,10 @@ using UnityEngine;
 public class BallMovement : MonoBehaviour
 {
     [SerializeField]
-    private float speedValue = 4.0f;
+    private float speedValueX = 4.0f;
+
+    [SerializeField]
+    private float speedValueY = 4.0f;
 
     private Rigidbody2D ballRB;
 
@@ -13,7 +16,7 @@ public class BallMovement : MonoBehaviour
     private void Start()
     {
         ballRB = this.GetComponent<Rigidbody2D>();    
-        ballRB.velocity = new Vector2(speedValue,0);
+        ballRB.velocity = new Vector2(speedValueX,speedValueY);
     }
 
     // Update is called once per frame
@@ -24,8 +27,14 @@ public class BallMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision) {
         if(collision.gameObject.CompareTag("paddle")){
-            speedValue *= -1;
-            Vector2 invertVelocity = new Vector2(speedValue, 0);
+            speedValueX *= -1;
+            Vector2 invertVelocity = new Vector2(speedValueX, speedValueY);
+            ballRB.velocity = invertVelocity;
+        } 
+
+        if(collision.gameObject.CompareTag("wall")){
+            speedValueY *= -1;
+            Vector2 invertVelocity = new Vector2(speedValueX, speedValueY);
             ballRB.velocity = invertVelocity;
         } 
     }
