@@ -6,10 +6,10 @@ using TMPro;
 public class BallMovement : MonoBehaviour
 {
     [SerializeField]
-    private float speedValueX = 6.0f;
+    private float speedValueX = 5.0f;
 
     [SerializeField]
-    private float speedValueY = 6.0f;
+    private float speedValueY = 5.0f;
 
     private Rigidbody2D ballRB;
     private Vector2 initialPosition;
@@ -23,6 +23,9 @@ public class BallMovement : MonoBehaviour
     private int player2Score = 0;
     [SerializeField]
     private TextMeshProUGUI player2Text;
+
+    [SerializeField]
+    private AudioSource audioSource;
 
     private int winnerScore = 15;
 
@@ -51,7 +54,6 @@ public class BallMovement : MonoBehaviour
         if (randomSpeed == 0)
             speedValueY *=-1;
 
-        Debug.Log(speedValueX + " and: " + speedValueY);
         ballRB.velocity = new Vector2(speedValueX,speedValueY);
     }
     private void OnCollisionEnter2D(Collision2D collision) {
@@ -59,6 +61,7 @@ public class BallMovement : MonoBehaviour
             speedValueX *= -1;
             Vector2 invertVelocity = new Vector2(speedValueX, speedValueY);
             ballRB.velocity = invertVelocity;
+            PlayCollisionSound();
         } 
 
         if(collision.gameObject.CompareTag("wall")){
@@ -68,6 +71,7 @@ public class BallMovement : MonoBehaviour
         } 
 
         if(collision.gameObject.CompareTag("P1score") || collision.gameObject.CompareTag("P2score")){
+            PlayPointSound();
             if(collision.gameObject.CompareTag("P1score")){  
                 player1Score += 1;
                 player1Text.text = player1Score.ToString();
@@ -94,6 +98,16 @@ public class BallMovement : MonoBehaviour
             ballRB.position = initialPosition;
             ballRB.velocity = initialVelocity;
             randomSpeed();
+    }
+
+    private void PlayCollisionSound(){
+        AudioClip audioClip = Resources.Load<AudioClip>("Collision");
+        audioSource.PlayOneShot(audioClip);
+    }
+
+    private void PlayPointSound(){
+        audioSource.clip = Resources.Load<AudioClip>("Death");
+        audioSource.Play();
     }
 
     private void RestartGame(){
