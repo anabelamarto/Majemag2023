@@ -6,10 +6,10 @@ using TMPro;
 public class BallMovement : MonoBehaviour
 {
     [SerializeField]
-    private float speedValueX = 4.0f;
+    private float speedValueX = 6.0f;
 
     [SerializeField]
-    private float speedValueY = 4.0f;
+    private float speedValueY = 6.0f;
 
     private Rigidbody2D ballRB;
     private Vector2 initialPosition;
