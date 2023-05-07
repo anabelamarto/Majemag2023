@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEditor.SceneManagement;
+using UnityEngine.SceneManagement;
 
 public class BallMovement : MonoBehaviour
 {
@@ -27,7 +29,9 @@ public class BallMovement : MonoBehaviour
     [SerializeField]
     private AudioSource audioSource;
 
-    private int winnerScore = 15;
+    private int winnerScore = 2;
+
+    public static string winnerStr;
 
     // Start is called before the first frame update
     private void Start()
@@ -87,12 +91,14 @@ public class BallMovement : MonoBehaviour
 
     private void PlayerScored(){
         if (player1Score == winnerScore){
-            Debug.Log("Player 1 won!");
-            RestartGame();
+            
+            string winner = "Player 1";
+            //SceneManager.LoadScene("MenuScene", LoadSceneMode.Additive);
+            Victory(winner);
         }
         else if(player2Score == winnerScore){
-            Debug.Log("Player 2 won!");
-            RestartGame();
+            string winner = "Player 2";
+            Victory(winner);
         }
 
             ballRB.position = initialPosition;
@@ -110,10 +116,16 @@ public class BallMovement : MonoBehaviour
         audioSource.Play();
     }
 
-    private void RestartGame(){
+/*    private void RestartGame(){
         player1Score = 0;
         player2Score = 0;
         player1Text.text = player1Score.ToString();
         player2Text.text = player2Score.ToString();
+    }
+*/
+
+    public void Victory(string winner){
+        winnerStr = winner;
+        SceneManager.LoadScene("VictoryScene", LoadSceneMode.Single);
     }
 }
