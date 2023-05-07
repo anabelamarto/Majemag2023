@@ -29,7 +29,8 @@ public class BallMovement : MonoBehaviour
     [SerializeField]
     private AudioSource audioSource;
 
-    private int winnerScore = 2;
+    [SerializeField]
+    private int winnerScore = 15;
 
     public static string winnerStr;
 
