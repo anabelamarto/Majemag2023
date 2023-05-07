@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class BallMovement : MonoBehaviour
 {
@@ -14,14 +15,22 @@ public class BallMovement : MonoBehaviour
     private Vector2 initialPosition;
     private Vector2 initialVelocity;
 
+    private int player1Score = 0;
+    
+    [SerializeField]
+    private TextMeshProUGUI player1Text;
+    
+    private int player2Score = 0;
+    [SerializeField]
+    private TextMeshProUGUI player2Text;
+
     // Start is called before the first frame update
     private void Start()
     {
         ballRB = this.GetComponent<Rigidbody2D>();    
         initialPosition = ballRB.position;
         ballRB.velocity = new Vector2(speedValueX,speedValueY);
-        initialVelocity = ballRB.velocity;
-        
+        initialVelocity = ballRB.velocity;        
     }
 
     // Update is called once per frame
@@ -44,11 +53,13 @@ public class BallMovement : MonoBehaviour
         } 
 
         if(collision.gameObject.CompareTag("P1score") || collision.gameObject.CompareTag("P2score")){
-            if(collision.gameObject.CompareTag("P1score")){
-                Debug.Log("Player 1 scored");
+            if(collision.gameObject.CompareTag("P1score")){  
+                player1Score += 1;
+                player1Text.text = player1Score.ToString();
             }
             else{
-                Debug.Log("Player 2 scored");
+                player2Score +=1;
+                player2Text.text = player2Score.ToString();
             }
             PlayerScored();
         } 
