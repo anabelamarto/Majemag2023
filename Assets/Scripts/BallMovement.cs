@@ -11,12 +11,17 @@ public class BallMovement : MonoBehaviour
     private float speedValueY = 4.0f;
 
     private Rigidbody2D ballRB;
+    private Vector2 initialPosition;
+    private Vector2 initialVelocity;
 
     // Start is called before the first frame update
     private void Start()
     {
         ballRB = this.GetComponent<Rigidbody2D>();    
+        initialPosition = ballRB.position;
         ballRB.velocity = new Vector2(speedValueX,speedValueY);
+        initialVelocity = ballRB.velocity;
+        
     }
 
     // Update is called once per frame
@@ -37,5 +42,20 @@ public class BallMovement : MonoBehaviour
             Vector2 invertVelocity = new Vector2(speedValueX, speedValueY);
             ballRB.velocity = invertVelocity;
         } 
+
+        if(collision.gameObject.CompareTag("P1score") || collision.gameObject.CompareTag("P2score")){
+            if(collision.gameObject.CompareTag("P1score")){
+                Debug.Log("Player 1 scored");
+            }
+            else{
+                Debug.Log("Player 2 scored");
+            }
+            PlayerScored();
+        } 
+    }
+
+    private void PlayerScored(){
+        ballRB.position = initialPosition;
+        ballRB.velocity = initialVelocity;
     }
 }

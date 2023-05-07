@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4278425376265407728}
   m_Layer: 0
   m_Name: paddle
-  m_TagString: Untagged
+  m_TagString: paddle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10000
-  playerControls: Vertical1P
+  axisName: Vertical1P
 --- !u!50 &-4550953492399744503
 Rigidbody2D:
   serializedVersion: 4
