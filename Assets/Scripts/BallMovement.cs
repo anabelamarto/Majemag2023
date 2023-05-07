@@ -24,21 +24,36 @@ public class BallMovement : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI player2Text;
 
+    private int winnerScore = 15;
+
     // Start is called before the first frame update
     private void Start()
     {
         ballRB = this.GetComponent<Rigidbody2D>();    
         initialPosition = ballRB.position;
-        ballRB.velocity = new Vector2(speedValueX,speedValueY);
-        initialVelocity = ballRB.velocity;        
+
+        randomSpeed();
+        //initialVelocity = ballRB.velocity;        
     }
 
     // Update is called once per frame
     private void Update()
-    {
+    {   
 
     }
 
+    private void randomSpeed(){
+        int randomSpeed = Random.Range(0,2);
+        if (randomSpeed == 0)
+            speedValueX *=-1;
+
+        randomSpeed = Random.Range(0,2);
+        if (randomSpeed == 0)
+            speedValueY *=-1;
+
+        Debug.Log(speedValueX + " and: " + speedValueY);
+        ballRB.velocity = new Vector2(speedValueX,speedValueY);
+    }
     private void OnCollisionEnter2D(Collision2D collision) {
         if(collision.gameObject.CompareTag("paddle")){
             speedValueX *= -1;
@@ -61,12 +76,30 @@ public class BallMovement : MonoBehaviour
                 player2Score +=1;
                 player2Text.text = player2Score.ToString();
             }
+            randomSpeed();
             PlayerScored();
         } 
     }
 
     private void PlayerScored(){
-        ballRB.position = initialPosition;
-        ballRB.velocity = initialVelocity;
+        if (player1Score == winnerScore){
+            Debug.Log("Player 1 won!");
+            RestartGame();
+        }
+        else if(player2Score == winnerScore){
+            Debug.Log("Player 2 won!");
+            RestartGame();
+        }
+
+            ballRB.position = initialPosition;
+            ballRB.velocity = initialVelocity;
+            randomSpeed();
+    }
+
+    private void RestartGame(){
+        player1Score = 0;
+        player2Score = 0;
+        player1Text.text = player1Score.ToString();
+        player2Text.text = player2Score.ToString();
     }
 }
