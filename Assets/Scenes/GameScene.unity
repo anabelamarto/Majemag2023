@@ -178,16 +178,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: paddleLeft
       objectReference: {fileID: 0}
-    - target: {fileID: 4939996761289138990, guid: 2542d9101cd5ee2449971e0e1489bba2, type: 3}
-      propertyPath: m_TagString
-      value: paddle
-      objectReference: {fileID: 0}
-    - target: {fileID: 4939996761289138991, guid: 2542d9101cd5ee2449971e0e1489bba2, type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 0}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2542d9101cd5ee2449971e0e1489bba2, type: 3}
 --- !u!1001 &130909374
 PrefabInstance:
@@ -248,32 +239,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4939996761289138985, guid: 2542d9101cd5ee2449971e0e1489bba2, type: 3}
-      propertyPath: player
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4939996761289138985, guid: 2542d9101cd5ee2449971e0e1489bba2, type: 3}
-      propertyPath: axisName
-      value: Vertical2P
-      objectReference: {fileID: 0}
-    - target: {fileID: 4939996761289138985, guid: 2542d9101cd5ee2449971e0e1489bba2, type: 3}
-      propertyPath: playerControls
-      value: Vertical2P
-      objectReference: {fileID: 0}
     - target: {fileID: 4939996761289138990, guid: 2542d9101cd5ee2449971e0e1489bba2, type: 3}
       propertyPath: m_Name
       value: paddleRight
       objectReference: {fileID: 0}
-    - target: {fileID: 4939996761289138990, guid: 2542d9101cd5ee2449971e0e1489bba2, type: 3}
-      propertyPath: m_TagString
-      value: paddle
+    - target: {fileID: 6015359765071761757, guid: 2542d9101cd5ee2449971e0e1489bba2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4939996761289138991, guid: 2542d9101cd5ee2449971e0e1489bba2, type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
+    - target: {fileID: 6015359765071761757, guid: 2542d9101cd5ee2449971e0e1489bba2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: -1
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 0}
+    - target: {fileID: 6015359765071761757, guid: 2542d9101cd5ee2449971e0e1489bba2, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6015359765071761757, guid: 2542d9101cd5ee2449971e0e1489bba2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 6015359765071761757, guid: 2542d9101cd5ee2449971e0e1489bba2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.84
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2542d9101cd5ee2449971e0e1489bba2, type: 3}
 --- !u!1001 &161248745
 PrefabInstance:
@@ -1718,7 +1708,7 @@ GameObject:
   - component: {fileID: 1466153652}
   - component: {fileID: 1466153651}
   m_Layer: 5
-  m_Name: Scores
+  m_Name: ScoresCanvas
   m_TagString: showScores
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
