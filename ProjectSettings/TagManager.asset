@@ -9,6 +9,8 @@ TagManager:
   - P2score
   - P1score
   - showScores
+  - collectNamesP1
+  - collectNamesP2
   layers:
   - Default
   - TransparentFX

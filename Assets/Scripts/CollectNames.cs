@@ -6,11 +6,15 @@ using TMPro;
 public class CollectNames : MonoBehaviour
 {
     public static TMP_InputField nameP1;
+    public static TMP_InputField nameP2;
 
     // Start is called before the first frame update
     void Start()
     {       
-        nameP1 = this.GetComponent<TMP_InputField>();
+        if(CompareTag("collectNamesP1"))
+            nameP1 = this.GetComponent<TMP_InputField>();
+        if(CompareTag("collectNamesP2"))
+            nameP2 = this.GetComponent<TMP_InputField>();
     }
 
     // Update is called once per frame

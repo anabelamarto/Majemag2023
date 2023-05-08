@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1799019942056296885, guid: 2542d9101cd5ee2449971e0e1489bba2, type: 3}
+      propertyPath: m_TagString
+      value: collectNamesP1
+      objectReference: {fileID: 0}
     - target: {fileID: 1802469056682179075, guid: 2542d9101cd5ee2449971e0e1489bba2, type: 3}
       propertyPath: m_SortingOrder
       value: 2
@@ -198,6 +202,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6015359765071761757, guid: 2542d9101cd5ee2449971e0e1489bba2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.83
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2542d9101cd5ee2449971e0e1489bba2, type: 3}
 --- !u!1 &100402971 stripped
@@ -224,6 +232,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1799019942056296885, guid: 2542d9101cd5ee2449971e0e1489bba2, type: 3}
+      propertyPath: m_TagString
+      value: collectNamesP2
+      objectReference: {fileID: 0}
     - target: {fileID: 1802469056682179075, guid: 2542d9101cd5ee2449971e0e1489bba2, type: 3}
       propertyPath: m_SortingOrder
       value: 2
@@ -314,6 +326,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2542d9101cd5ee2449971e0e1489bba2, type: 3}
+--- !u!1 &130909375 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1799019942056296885, guid: 2542d9101cd5ee2449971e0e1489bba2, type: 3}
+  m_PrefabInstance: {fileID: 130909374}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &130909376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130909375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d42a97493a470a048bf6c573b846b8e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &161248745
 PrefabInstance:
   m_ObjectHideFlags: 0
