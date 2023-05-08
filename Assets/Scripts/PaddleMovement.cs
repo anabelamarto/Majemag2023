@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PaddleMovement : MonoBehaviour
 {
@@ -11,12 +12,14 @@ public class PaddleMovement : MonoBehaviour
     private string axisName = "Vertical1P";
 
     private Rigidbody2D paddleRB;
-    
+
+
 
     // Start is called before the first frame update
     private void Start()
     {
         paddleRB = this.GetComponent<Rigidbody2D>();
+
     }
 
     // Update is called once per frame

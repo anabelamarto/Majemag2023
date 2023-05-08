@@ -16,7 +16,7 @@ public class CollectNames : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return))
-            Debug.Log(nameP1.text);
+        /*if (Input.GetKeyDown(KeyCode.Return))
+            Debug.Log(nameP1.text);*/
     }
 }

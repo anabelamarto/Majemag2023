@@ -5,15 +5,13 @@ using TMPro;
 
 public class AddName : MonoBehaviour
 {
-    private TextMeshProUGUI playerNameTMP;
+    private TextMeshPro playerNameTMP;
 
     // Start is called before the first frame update
     void Start()
     {
-        playerNameTMP = this.GetComponent<TextMeshProUGUI>();
-        playerNameTMP.text = CollectNames.nameP1.text;
-        Debug.Log(playerNameTMP);
-
+        playerNameTMP = this.GetComponent<TextMeshPro>();
+        playerNameTMP.text = "<rotate=90> " + CollectNames.nameP1.text;
     }
 
     // Update is called once per frame

@@ -130,6 +130,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1799019942056296885, guid: 2542d9101cd5ee2449971e0e1489bba2, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1802469056682179075, guid: 2542d9101cd5ee2449971e0e1489bba2, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2818527564271049509, guid: 2542d9101cd5ee2449971e0e1489bba2, type: 3}
+      propertyPath: _SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2818527564271049509, guid: 2542d9101cd5ee2449971e0e1489bba2, type: 3}
+      propertyPath: m_uvLineOffset
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4939996761289138984, guid: 2542d9101cd5ee2449971e0e1489bba2, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -178,8 +194,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: paddleLeft
       objectReference: {fileID: 0}
+    - target: {fileID: 4939996761289138991, guid: 2542d9101cd5ee2449971e0e1489bba2, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2542d9101cd5ee2449971e0e1489bba2, type: 3}
+--- !u!1 &100402971 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1799019942056296885, guid: 2542d9101cd5ee2449971e0e1489bba2, type: 3}
+  m_PrefabInstance: {fileID: 100402970}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &100402972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100402971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d42a97493a470a048bf6c573b846b8e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &130909374
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -187,6 +224,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1802469056682179075, guid: 2542d9101cd5ee2449971e0e1489bba2, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4939996761289138984, guid: 2542d9101cd5ee2449971e0e1489bba2, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -239,9 +280,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4939996761289138985, guid: 2542d9101cd5ee2449971e0e1489bba2, type: 3}
+      propertyPath: axisName
+      value: Vertical2P
+      objectReference: {fileID: 0}
     - target: {fileID: 4939996761289138990, guid: 2542d9101cd5ee2449971e0e1489bba2, type: 3}
       propertyPath: m_Name
       value: paddleRight
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939996761289138991, guid: 2542d9101cd5ee2449971e0e1489bba2, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6015359765071761757, guid: 2542d9101cd5ee2449971e0e1489bba2, type: 3}
       propertyPath: m_LocalScale.x
@@ -2025,6 +2074,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 232641960}
     m_Modifications:
+    - target: {fileID: 6520428898319717674, guid: b195577cb3afce444a56445ad9948f82, type: 3}
+      propertyPath: m_Size.x
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 6520428898319717674, guid: b195577cb3afce444a56445ad9948f82, type: 3}
+      propertyPath: m_Size.y
+      value: 8.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6520428898319717674, guid: b195577cb3afce444a56445ad9948f82, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6520428898319717674, guid: b195577cb3afce444a56445ad9948f82, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6520428898319717675, guid: b195577cb3afce444a56445ad9948f82, type: 3}
       propertyPath: m_RootOrder
       value: 7
