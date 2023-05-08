@@ -12,11 +12,11 @@ public class AddName : MonoBehaviour
     {
         if(CompareTag("collectNamesP1")){
             playerNameTMP = this.GetComponent<TextMeshPro>();
-            playerNameTMP.text = "<rotate=90> " + CollectNames.nameP1.text;
+            playerNameTMP.text = "<rotate=90> " + CollectNames.nameP1;
         }
         if(CompareTag("collectNamesP2")){
             playerNameTMP = this.GetComponent<TextMeshPro>();
-            playerNameTMP.text = "<rotate=90> " + CollectNames.nameP2.text;
+            playerNameTMP.text = "<rotate=90> " + CollectNames.nameP2;
         }
     }
 

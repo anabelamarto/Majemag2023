@@ -93,12 +93,12 @@ public class BallMovement : MonoBehaviour
     private void PlayerScored(){
         if (player1Score == winnerScore){
             
-            string winner = CollectNames.nameP1.text;
+            string winner = CollectNames.nameP1;
             //SceneManager.LoadScene("MenuScene", LoadSceneMode.Additive);
             Victory(winner);
         }
         else if(player2Score == winnerScore){
-            string winner = CollectNames.nameP2.text;
+            string winner = CollectNames.nameP2;
             Victory(winner);
         }
 
