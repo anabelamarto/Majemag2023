@@ -540,7 +540,7 @@ MonoBehaviour:
   m_CaretColor: {r: 0.8862746, g: 0.9686275, b: 0.1764706, a: 1}
   m_CustomCaretColor: 0
   m_SelectionColor: {r: 0.8862746, g: 0.9686275, b: 0.1764706, a: 0.49019608}
-  m_Text: PL1
+  m_Text: ___
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
@@ -867,7 +867,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "PL1\u200B"
+  m_text: "___\u200B"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1459832cb98cf8e458bc53b8dbf5f8f6, type: 2}
   m_sharedMaterial: {fileID: -8348811500949263869, guid: 1459832cb98cf8e458bc53b8dbf5f8f6, type: 2}
@@ -1316,7 +1316,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "PL2\u200B"
+  m_text: "___\u200B"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1459832cb98cf8e458bc53b8dbf5f8f6, type: 2}
   m_sharedMaterial: {fileID: -8348811500949263869, guid: 1459832cb98cf8e458bc53b8dbf5f8f6, type: 2}
@@ -1918,7 +1918,7 @@ MonoBehaviour:
   m_CaretColor: {r: 0.8862746, g: 0.9686275, b: 0.1764706, a: 1}
   m_CustomCaretColor: 0
   m_SelectionColor: {r: 0.8862746, g: 0.9686275, b: 0.1764706, a: 0.49019608}
-  m_Text: PL2
+  m_Text: ___
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
